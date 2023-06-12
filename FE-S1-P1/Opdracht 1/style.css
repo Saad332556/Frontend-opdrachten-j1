@@ -1,0 +1,36 @@
+body {
+    text-align: center;
+}
+h1 span{
+    color: gray;
+    background-color: black;
+}
+h3 span{
+    color: white;
+    background-color: red;
+}
+p span{
+    color: white;
+    background-color: purple;
+}
+a {
+    color: green;
+}
+#background-video {
+    width: 100vw;
+    height: 100vh;
+    object-fit: cover;
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    z-index: -1;
+}
+@media (max-width: 750px) {
+    #background-video { display: none; }
+    body {
+      background: url("Images/rickroll.mp4") no-repeat;
+      background-size: cover;
+    }
+}
