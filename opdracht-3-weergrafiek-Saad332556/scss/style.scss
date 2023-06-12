@@ -1,0 +1,30 @@
+@use 'config/color';
+@use 'config/size';
+
+@use 'util/mixin/shadow';
+@use 'util/mixin/gradient';
+@use 'util/mixin/transform';
+@use 'util/mixin/border';
+
+@import 'util/class/__all__';
+
+@import 'content/__all__';
+
+//@import 'components/__all__';
+
+body {
+  @include gradient.radial(#4747c8, #030348);
+}
+
+h2 {
+  text-align: center;
+}
+
+div#update { color: color.white(5) }
+
+
+canvas {
+  @include shadow.box($ver: .5rem, $blur: 1rem, $color: color.black(5));
+  margin: 1rem 0;
+  background-color: color.white(6);
+}

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <link rel="stylesheet" href="css/style.css">
+  </head>
+  <body class="dark">
+
+    <div class="container">
+      <div class="col-12 txt-center">
+        <button id="geo" class="c-3 outline small">Use my position</button>
+      </div>
+      <h2>Current</h2>
+
+      <div id="update" class="col-12 py-2"></div>
+
+      <div id="current" class="row">
+        <div class="weather col-s-12 col-l-6 txt-center p-2">
+
+          <div class="col-6 fd-col">
+            <div id="current-icon"></div>
+            <div id="current-description"></div>
+          </div>
+
+          <div class="col-6">
+            <div id="current-temp"></div>
+          </div>
+
+        </div>
+        <div class="info col-s-12 col-l-6 txt-center p-2">
+          <div class="col-s-6 col-l-12 fd-col">
+            Wind Direction
+            <div id="current-winddeg"></div>
+            Wind Speed
+            <div id="current-windspeed"></div>
+          </div>
+          <div class="col-s-6 col-l-12 fd-col">
+            Feel
+            <div id="current-feel"></div>
+            Humidity
+            <div id="current-humid"></div>
+          </div>
+        </div>
+      </div>
+
+      <h2>Hourly</h2>
+      <canvas id="hourly"></canvas>
+
+      <h2>Daily</h2>
+      <canvas id="daily"></canvas>
+    </div>
+    <script type="text/javascript" src="node_modules/chart.js/dist/chart.min.js"></script>
+    <script type="text/javascript" src="scripts/helpers.js"></script>
+    <script type="text/javascript" src="scripts/weather.js"></script>
+    <script type="text/javascript" src="scripts/chart.js"></script>
+    <script type="text/javascript" src="script.js"></script>
+  </body>
+</html>

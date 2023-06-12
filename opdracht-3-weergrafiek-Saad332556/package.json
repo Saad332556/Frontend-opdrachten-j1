@@ -1,0 +1,22 @@
+{
+  "name": "opdracht-3-weergrafiek-saad332556",
+  "version": "1.0.0",
+  "description": "Onderwijs Online Module: https://mboutrecht.onderwijsonline.nl/elearning/lesson/XD5XmGyb",
+  "main": "script.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MBO-Utrecht/opdracht-3-weergrafiek-Saad332556.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/MBO-Utrecht/opdracht-3-weergrafiek-Saad332556/issues"
+  },
+  "homepage": "https://github.com/MBO-Utrecht/opdracht-3-weergrafiek-Saad332556#readme",
+  "devDependencies": {
+    "chart.js": "^3.8.0"
+  }
+}
