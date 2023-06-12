@@ -1,0 +1,11 @@
+@use 'sass:map';
+
+$families: (
+  'normal': ('Josefin Sans', sans-serif),
+  'title': ('Space Mono', monospace)
+);
+
+@function family( $name: false ) {
+  @if $name { @return map.get($families, $name); }
+  @else { @return $fonts; }
+}

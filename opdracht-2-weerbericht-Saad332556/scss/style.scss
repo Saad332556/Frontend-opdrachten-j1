@@ -1,0 +1,26 @@
+@use 'config/color';
+
+@use 'util/mixin/gradient';
+@use 'util/mixin/border';
+
+@import 'util/class/__all__';
+
+@import 'content/__all__';
+
+body {
+  @include gradient.radial(#4747c8, #030348);
+}
+
+div.weatherblock {
+  @include border.set($width: 1px, $radius: .5rem);
+  display: flex;
+  width: 100%;
+  padding: .5rem 0;
+  flex-direction: column;
+  > div {
+    display: flex;
+    width: 100%;
+    min-height: 1.5rem;
+    justify-content: space-between;
+  }
+}

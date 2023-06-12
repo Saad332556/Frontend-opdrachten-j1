@@ -1,0 +1,45 @@
+@use 'config/color';
+
+@use 'util/mixin/gradient';
+@use 'util/mixin/border';
+@use 'util/mixin/shadow';
+
+@import 'util/class/__all__';
+
+@import 'content/__all__';
+
+//@import 'components/__all__';
+
+body {
+  @include gradient.radial(#4747c8, #030348);
+}
+
+div.weatherblock {
+  @include border.set($width: 0, $radius: .5rem);
+  @include shadow.box($ver: .5rem, $blur: .5rem, $color: color.black(3));
+  display: flex;
+  width: 100%;
+  padding: 1rem;
+  margin-bottom: 1rem;
+  background-color: color.white(3);
+  flex-direction: column;
+  div {
+    display: flex;
+    width: 100%;
+    min-height: 1.5rem;
+    color: color.white(4);
+    justify-content: space-between;
+    span { color: #fff }
+    &.time,
+    &.icon,
+    &.weather,
+    &.temp { justify-content: center; }
+    &.time,
+    &.weather {
+      font-size: .8rem;
+      color: color.white(5);
+    }
+    &.temp { font-size: 1.2rem; margin-bottom: 1rem; }
+    &.weather { text-transform: capitalize; }
+  }
+}
