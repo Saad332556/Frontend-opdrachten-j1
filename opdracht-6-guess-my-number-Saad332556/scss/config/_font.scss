@@ -1,0 +1,11 @@
+@use 'sass:map';
+
+$families: (
+  'normal': ('VT323', monospace),
+  'title': ('VT323', monospace)
+);
+
+@function family( $name: false ) {
+  @if $name { @return map.get($families, $name); }
+  @else { @return $fonts; }
+}

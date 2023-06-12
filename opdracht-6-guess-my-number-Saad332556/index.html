@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Opdracht 6: Guess My Number</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=VT323&display=swap" rel="stylesheet">
+
+    <link href='https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css' rel='stylesheet'>
+
+    <link rel="stylesheet" href="css/style.css">
+  </head>
+  <body>
+    <div class="main row fd-col jc-space-between">
+      <div class="top row jc-space-between">
+        <div class="col again">
+          <button id="again" class="c-3 outline">Again!</button>
+        </div>
+        <div class="col" id="range">Between <span id="min">1</span> and <span id="max">20</span></div>
+      </div>
+
+      <div class="middle row fd-col ai-center pb-5">
+        <div class="col"><h1 id="message">Guess My Number!</h1></div>
+        <div class="col"><div id="number">?</div></div>
+      </div>
+
+      <div class="input container">
+        <div class="row pb-5">
+          <div class="col-6 fd-col">
+            <input type="number" id="guess" placeholder="12" min="1" max="99" autofocus/>
+            <button id="check" class="c-4 outline">Guess!</button>
+          </div>
+          <div class="col-6 fd-col" id="info">
+            <div class="pb-3" id="feedback">
+              <i class='ca-txt-2 bx bxs-hourglass'></i> <span class="message">Waiting...</span>
+            </div>
+            <div id="lastguess" class="pb-3"><i class='ca-txt-2 bx bx-time-five' ></i></i> Last guess: <span class="value">...</span></div>
+            <div id="lives" class="pb-3"><i class='ca-txt-3 bx bxs-heart' ></i> Lives: <span class="value"></span></div>
+            <div id="highscore"><i class='ca-txt-5 bx bx-crown' ></i> Highscore: <span class="value"></span></div>
+          </div>
+        </div>
+      </div>
+  </div>
+  <script type="text/javascript" src="functions.js"></script>
+  <script type="text/javascript" src="script.js"></script>
+  </body>
+</html>

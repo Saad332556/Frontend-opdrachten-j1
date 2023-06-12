@@ -1,0 +1,88 @@
+@use 'config/color';
+@use 'config/font';
+
+@use 'util/mixin/gradient';
+@use 'util/mixin/transform';
+@use 'util/mixin/transition';
+
+// @TODO:
+// Import all of the content styling.
+
+@import 'util/class/__all__';
+
+body {
+  @include transition.set($prop: all, $dur: 1s);
+  @include gradient.radial($col1: #444, $col2: #111);
+
+  // @TODO:
+  // Als de win klasse actief is
+  // include gradient.radial mixin
+  // @param: $col1 darken(color.accent(1), 30%)
+  // @param: $col2 same
+
+}
+
+div.main {
+  height: 100vh;
+}
+
+// @TODO:
+// Selecteer de span in de div met ID range.
+// Verander de margin property naar: 0 .3rem
+// Verander de color property naar: color.accent(2)
+
+div.middle {
+
+  // @TODO:
+  // Selecteer h1 element met ID message
+  // Verander de property font-size naar 3.5 rem;
+
+  div#number {
+    position: relative;
+    padding: 1rem 2rem;
+    background-color: #fff;
+    color: #333;
+    font-size: 3rem;
+    &:before {
+      // @TODO:
+      // include transform.translateX
+      // @param: -50%
+
+      content: '';
+      position: absolute;
+      top: 50%;
+      width: 105vw;
+      height: .5rem;
+      background-color: #fff;
+      z-index: -1;
+    }
+    &.win:before {
+
+      // @TODO:
+      // background-color property moet verandert worden naar color.accent(1)
+
+    }
+  }
+}
+
+div.input {
+  input#guess {
+    position: relative;
+    min-width: fit-content;
+    width: 8rem;
+    padding: 1rem 2rem;
+    font-family: font.family('normal');
+    font-size: 2rem;
+    text-align: center;
+    -moz-appearance: textfield;
+    &:focus {
+      // @TODO:
+      // Verander de outline property naar: 7px double color.accent(2)
+      // Verander de animation property naar: focussed 0.7s steps(3, end) infinite both
+    }
+    &::-webkit-outer-spin-button,
+    &::-webkit-inner-spin-button {
+      -webkit-appearance: none;
+    }
+  }
+}
